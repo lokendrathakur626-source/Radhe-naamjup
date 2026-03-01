@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Radhe Click Game</title>
+
+  <style>
+    body {
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial;
+    }
+
+    img {
+      width: 250px;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      color: red;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <img src="premanand.jpg.jpeg" alt="Premanand Maharaj">
+
+  <h1 id="heading">Radhe ka diwana</h1>
+
+  <p id="counterText">Button dabaya: 0 times</p>
+
+  <button onclick="playGame()">RADHE</button>
+
+  <script>
+
+    var count = 0;
+
+    function playGame() {
+
+      count++;
+
+      var colors = ["red", "green", "blue", "orange", "pink", "yellow", "purple"];
+
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+      document.body.style.backgroundColor = randomColor;
+
+      document.getElementById("counterText").innerHTML =
+        "Shree Radhey: " + count + " times";
+
+      document.getElementById("heading").innerHTML =
+        "Radhe naam jap ";
+
+      if (count == 108) {
+        alert("Jai Shree Krishna!");
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
